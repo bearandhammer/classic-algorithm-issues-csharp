@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FizzBuzzerApp\FizzBuzzerApp.csproj" />
+    <ProjectReference Include="..\UnitTests.Shared\UnitTests.Shared.csproj" />
   </ItemGroup>
 
 </Project>
