@@ -1,4 +1,5 @@
-﻿using FizzBuzzerApp.Interfaces;
+﻿using FizzBuzzerApp.Constants;
+using FizzBuzzerApp.Interfaces;
 
 namespace FizzBuzzerApp.AppTypes
 {
@@ -11,8 +12,9 @@ namespace FizzBuzzerApp.AppTypes
         /// <inheritdoc/>
         public string FizzBuzz(int number) =>
             number % 3 == 0 && number % 5 == 0
-            ? "FizzBuzz" : number % 3 == 0
-            ? "Fizz" : number % 5 == 0
-            ? "Buzz" : number.ToString();
+            ? FizzBuzzResult.FizzBuzz
+            : number % 3 == 0 ? FizzBuzzResult.Fizz
+            : number % 5 == 0 ? FizzBuzzResult.Buzz
+            : number.ToString();
     }
 }
