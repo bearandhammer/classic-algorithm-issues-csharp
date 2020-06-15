@@ -7,7 +7,7 @@ namespace FizzBuzzerApp.Tests
 {
     public class FizzBuzzerTests
     {
-        [Theory()]
+        [Theory]
         [ClassData(typeof(FizzBuzzTestData))]
         public void FizzBuzz_Inputs_CorrectedTranslated(int inputValue, string expectedResult)
         {
