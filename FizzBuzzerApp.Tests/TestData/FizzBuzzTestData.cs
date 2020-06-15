@@ -37,7 +37,7 @@ namespace FizzBuzzerApp.Tests.TestData
             Add(6, Fizz);
             Add(7, "7");
             Add(8, "8");
-            Add(9, "9");
+            Add(9, Fizz);
             Add(10, Buzz);
             Add(11, "11");
             Add(12, Fizz);
