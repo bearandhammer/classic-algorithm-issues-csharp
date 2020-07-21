@@ -33,18 +33,20 @@ namespace FizzBuzzerApp.Tests
         }
 
         [Fact]
-        public void TryParseInput_RawStartEndValues_StartGreaterThanEnd_Returns_False()
+        public void TryParseInput_RawStartEndValues_StartGreaterThanOrEqualToEnd_Returns_False()
         {
+            // Arrange/Act/Assert
             new Validator().TryParseInput("2", "1", out _).Should().BeFalse();
+            new Validator().TryParseInput("1", "1", out _).Should().BeFalse();
         }
 
         [Fact]
         public void TryParseInput_RawStartEndValues_InRange_StartLessThanEnd_Returns_True()
         {
-            // TODO
-            new Validator().TryParseInput("1", "2", out (int StartValue, int EndValue) inputValues).Should().BeTrue();
-            inputValues.StartValue.Should().Be(1);
-            inputValues.EndValue.Should().Be(2);
+            // Arrange/Act/Assert
+            new Validator().TryParseInput("0", "100", out (int StartValue, int EndValue) inputValues).Should().BeTrue();
+            inputValues.StartValue.Should().Be(0);
+            inputValues.EndValue.Should().Be(100);
         }
     }
 }
