@@ -68,9 +68,9 @@ namespace FizzBuzzerApp
         {
             if (inputValidator.TryParseInput(rawStartValue, rawEndValue, out (int StartValue, int EndValue) inputValues))
             {
-                for (int i = inputValues.StartValue = 0; i < inputValues.EndValue; i++)
+                for (int i = inputValues.StartValue = 0; i <= inputValues.EndValue; i++)
                 {
-                    Console.WriteLine($"Result for '{ i }' is: ' { fizzBuzzer.FizzBuzz(i) } '");
+                    Console.WriteLine($"Result for '{ i }' is: '{ fizzBuzzer.FizzBuzz(i) }'");
                 }
             }
             else
